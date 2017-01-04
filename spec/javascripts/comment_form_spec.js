@@ -36,8 +36,8 @@ describe("CommentCreator", function() {
       var request = jasmine.Ajax.requests.mostRecent();
       var ccContent = commentCreator.comment.content
       var ccTitle = commentCreator.comment.title
-      expect(ccContent).toBe("Cinematic Gold!");
-      expect(ccTitle).toBe("You have to see this");
+      expect(ccTitle.toBe("Cinematic Gold!");
+      expect(ccContent.toBe("You have to see this.");
     });
 
     it("notifies the user after posting the data", function() {
