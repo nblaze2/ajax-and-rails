@@ -91,11 +91,12 @@ Teaspoon.configure do |config|
   # Rake:
   # teaspoon DRIVER=phantomjs SERVER_PORT=31337 FAIL_FAST=true FORMATTERS=junit suite=my_suite
 
-  # Specify which headless driver to use. Supports PhantomJS and Selenium Webdriver.
+  # Specify which headless driver to use. Supports PhantomJS, Selenium Webdriver and BrowserStack Webdriver.
   #
-  # Available: :phantomjs, :selenium, :capybara_webkit
+  # Available: :phantomjs, :selenium, :browserstack, :capybara_webkit
   # PhantomJS: https://github.com/modeset/teaspoon/wiki/Using-PhantomJS
   # Selenium Webdriver: https://github.com/modeset/teaspoon/wiki/Using-Selenium-WebDriver
+  # BrowserStack Webdriver: https://github.com/modeset/teaspoon/wiki/Using-BrowserStack-WebDriver
   # Capybara Webkit: https://github.com/modeset/teaspoon/wiki/Using-Capybara-Webkit
   #config.driver = :phantomjs
 
@@ -103,6 +104,7 @@ Teaspoon.configure do |config|
   #
   # PhantomJS: https://github.com/modeset/teaspoon/wiki/Using-PhantomJS
   # Selenium Webdriver: https://github.com/modeset/teaspoon/wiki/Using-Selenium-WebDriver
+  # BrowserStack Webdriver: https://github.com/modeset/teaspoon/wiki/Using-BrowserStack-WebDriver
   # Capybara Webkit: https://github.com/modeset/teaspoon/wiki/Using-Capybara-Webkit
   #config.driver_options = nil
 
@@ -112,6 +114,9 @@ Teaspoon.configure do |config|
 
   # Specify a server to use with Rack (e.g. thin, mongrel). If nil is provided Rack::Server is used.
   #config.server = nil
+
+  # Specify a host to run on a specific host, otherwise Teaspoon will use 127.0.0.1.
+  #config.server_host = nil
 
   # Specify a port to run on a specific port, otherwise Teaspoon will use a random available port.
   #config.server_port = nil
